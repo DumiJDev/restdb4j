@@ -1,5 +1,6 @@
 package io.github.dumijdev.restdbserver.application.core.domain.common;
 
+import java.util.Optional;
 import java.util.Set;
 import java.util.function.Predicate;
 
@@ -40,7 +41,7 @@ public record Where(String symbol, Set<Condition> conditions) {
     }
   }
 
-  public record Condition(String field, Operator operator, Object value) {
+  public record Condition(String field, Optional<String> table, Operator operator, Object value) {
   }
 
   public enum Symbol {

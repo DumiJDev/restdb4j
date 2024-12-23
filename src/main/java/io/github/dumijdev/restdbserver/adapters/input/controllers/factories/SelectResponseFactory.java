@@ -6,7 +6,6 @@ import io.github.dumijdev.restdbserver.application.core.domain.select.SelectResu
 
 public class SelectResponseFactory {
   public static SelectResponse createFromSelectResult(SelectResult result) {
-    System.out.println(result);
     return new SelectResponse(
         result.items().stream()
             .map(SelectItem::toMap)

@@ -9,12 +9,12 @@ restdb4j:
   platform: ${RESTDB_PLATFORM:h2}
   host: ${RESTDB_HOST:localhost}
   port: ${RESTDB_PORT:}
-  user: ${RESTDB_USER:}
+  user: ${RESTDB_USER:sa}
   password: ${RESTDB_PWD:}
-  database: ${RESTDB_DB:}
+  database: ${RESTDB_DB:restdb.db}
   driver-class: ${RESTDB_DRIVER_CLASS:}
-  url: ${RESTDB_URL:}
+  url: ${RESTDB_URL:jdbc:h2:file:/etc/restdb/restdb.db}
 
 server:
   servlet:
-    context-path: /${RESTDB_NAME:restdb}
+    context-path: /${RESTDB_SERVER_NAME:restdb}

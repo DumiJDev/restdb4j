@@ -36,11 +36,8 @@ public class OracleStrategy extends MySQLStrategy implements DatabaseStrategy {
   }
 
   private void appendPagination(StringBuilder sql, SelectParams params) {
-    String fields = params.fields().isEmpty() ? "*" : String.join(", ", params.fields());
-
     sql.setLength(0);
-    sql.append(String.format("SELECT %s FROM ", fields));
-
+    appendFields(sql, params);
     appendTable(sql, params.table(), params.schema());
 
     params.where().ifPresent(where -> appendWhere(sql, params.where().get()));

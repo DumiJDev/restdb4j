@@ -38,6 +38,23 @@ public class SelectOperationService implements SelectOperationInputPort {
       errors.add(new ItemException("table", "Cannot be null"));
     }
 
+    if (params.fields() != null && !params.fields().isEmpty()) {
+      var i = 0;
+      for (var field : params.fields()) {
+        if (field.name() == null) {
+          errors.add(new ItemException("field[%d]".formatted(i), "Cannot be null"));
+        } else if (field.name().isEmpty()) {
+          errors.add(new ItemException("field[%d]".formatted(i), "Cannot be empty"));
+        }
+
+        if (field.alias().isPresent() && field.alias().get().isEmpty()) {
+          errors.add(new ItemException("alias[%d]".formatted(i), "Cannot be empty"));
+        }
+
+        i++;
+      }
+    }
+
     if (params.where().isPresent()) {
       var where = params.where().get();
 
@@ -47,18 +64,74 @@ public class SelectOperationService implements SelectOperationInputPort {
       var i = 0;
       for (var condition : where.conditions()) {
         if (condition.field() == null) {
-          errors.add(new ItemException("condition[%d]".formatted(i), "Field cannot be null"));
+          errors.add(new ItemException("condition[%d]".formatted(i), "Field Cannot be null"));
         }
 
         if (condition.operator() == null) {
-          errors.add(new ItemException("condition[%d]".formatted(i), "Operator cannot be null"));
+          errors.add(new ItemException("condition[%d]".formatted(i), "Operator Cannot be null"));
         }
 
         var operator = condition.operator();
         var isUnary = operator != NOT && operator != NOT_NULL && operator != NULL;
 
         if (condition.value() == null && isUnary) {
-          errors.add(new ItemException("condition[%d]".formatted(i), "Value cannot be null"));
+          errors.add(new ItemException("condition[%d]".formatted(i), "Value Cannot be null"));
+        }
+
+        i++;
+      }
+    }
+
+    if (params.joins() != null && !params.joins().isEmpty()) {
+      var i = 0;
+      for (var join : params.joins()) {
+        if (join.table() == null) {
+          errors.add(new ItemException("join table[%d]".formatted(i), "Cannot be null"));
+        } else if (join.table().isEmpty()) {
+          errors.add(new ItemException("join table[%d]".formatted(i), "Cannot be empty"));
+        }
+
+        if (join.alias().isPresent() && join.alias().get().isEmpty()) {
+          errors.add(new ItemException("join table alias[%d]".formatted(i), "Cannot be empty"));
+        }
+
+        for (var onItem : join.on()) {
+          if (onItem.left() == null) {
+            errors.add(new ItemException("join table left[%d]".formatted(i), "Cannot be null"));
+          }
+
+          if (onItem.left() != null) {
+            var left = onItem.left();
+            if (left.field() == null) {
+              errors.add(new ItemException("join table left field[%d]".formatted(i), "Cannot be null"));
+            } else if (left.field().isEmpty()) {
+              errors.add(new ItemException("join table left field[%d]".formatted(i), "Cannot be empty"));
+            }
+
+            if (left.table() == null) {
+              errors.add(new ItemException("join table left table[%d]".formatted(i), "Cannot be empty"));
+            } else if (left.table().isEmpty()) {
+              errors.add(new ItemException("join table left table[%d]".formatted(i), "Cannot be empty"));
+            }
+          }
+
+          if (onItem.right().isPresent()) {
+            var right = onItem.right().get();
+            if (right.field() == null) {
+              errors.add(new ItemException("join table right field[%d]".formatted(i), "Cannot be null"));
+            } else if (right.field().isEmpty()) {
+              errors.add(new ItemException("join table right field[%d]".formatted(i), "Cannot be empty"));
+            }
+
+            if (right.table() == null) {
+              errors.add(new ItemException("join table right table[%d]".formatted(i), "Cannot be null"));
+            } else if (right.table().isEmpty()) {
+              errors.add(new ItemException("join table right table[%d]".formatted(i), "Cannot be empty"));
+            }
+
+          } else if(onItem.value().isEmpty()) {
+            errors.add(new ItemException("join table value[%d]".formatted(i), "Cannot be null"));
+          }
         }
 
         i++;

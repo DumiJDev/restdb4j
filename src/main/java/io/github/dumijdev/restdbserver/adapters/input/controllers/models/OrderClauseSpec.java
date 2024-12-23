@@ -1,4 +1,4 @@
 package io.github.dumijdev.restdbserver.adapters.input.controllers.models;
 
-public record OrderClause(String field, String direction) {
+public record OrderClauseSpec(String field, String direction) {
 }

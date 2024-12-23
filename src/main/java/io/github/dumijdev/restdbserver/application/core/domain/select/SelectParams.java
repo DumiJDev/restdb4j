@@ -7,8 +7,9 @@ import java.util.Set;
 
 import static java.util.Optional.ofNullable;
 
-public record SelectParams(String table, Optional<String> schema, Set<String> fields, Optional<Where> where,
-                           Set<Order> order, Optional<Integer> limit, Optional<Integer> offset) {
+public record SelectParams(String table, Optional<String> alias, Optional<String> schema, Set<SelectField> fields, Optional<Where> where,
+                           Set<Order> order, Set<SelectJoins> joins, Optional<Integer> limit,
+                           Optional<Integer> offset, Optional<String> sqlQuery) {
   public static SelectParamsBuilder builder() {
     return new SelectParamsBuilder();
   }
@@ -16,11 +17,14 @@ public record SelectParams(String table, Optional<String> schema, Set<String> fi
   public static final class SelectParamsBuilder {
     private String table;
     private String schema;
-    private Set<String> fields;
+    private Set<SelectField> fields;
     private Where where;
     private Set<Order> order;
     private Integer limit;
     private Integer offset;
+    private Set<SelectJoins> joins;
+    private String alias;
+    private String sqlQuery;
 
     private SelectParamsBuilder() {
     }
@@ -35,7 +39,7 @@ public record SelectParams(String table, Optional<String> schema, Set<String> fi
       return this;
     }
 
-    public SelectParamsBuilder fields(Set<String> fields) {
+    public SelectParamsBuilder fields(Set<SelectField> fields) {
       this.fields = fields;
       return this;
     }
@@ -47,6 +51,11 @@ public record SelectParams(String table, Optional<String> schema, Set<String> fi
 
     public SelectParamsBuilder order(Order... orders) {
       this.order = Set.of(orders);
+      return this;
+    }
+
+    public SelectParamsBuilder joins(Set<SelectJoins> joins) {
+      this.joins = joins;
       return this;
     }
 
@@ -65,8 +74,20 @@ public record SelectParams(String table, Optional<String> schema, Set<String> fi
       return this;
     }
 
-    public SelectParams build() {
-      return new SelectParams(table, Optional.ofNullable(schema), fields, ofNullable(where), order, ofNullable(limit), ofNullable(offset));
+    public SelectParamsBuilder alias(String alias) {
+      this.alias = alias;
+      return this;
     }
+
+    public SelectParamsBuilder sql(String sqlQuery) {
+      this.sqlQuery = sqlQuery;
+      return this;
+    }
+
+    public SelectParams build() {
+      return new SelectParams(table, ofNullable(alias), ofNullable(schema), fields, ofNullable(where),
+          order, joins, ofNullable(limit), ofNullable(offset), ofNullable(sqlQuery));
+    }
+
   }
 }

@@ -1,6 +1,7 @@
 package io.github.dumijdev.restdbserver.adapters.output.database;
 
 import io.github.dumijdev.restdbserver.adapters.output.database.utils.SQLGenerator;
+import io.github.dumijdev.restdbserver.application.core.domain.common.Where;
 import io.github.dumijdev.restdbserver.application.core.domain.exceptions.InvalidException;
 import io.github.dumijdev.restdbserver.application.core.domain.exceptions.ValidationException;
 import io.github.dumijdev.restdbserver.application.core.domain.select.SelectItem;
@@ -11,12 +12,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.jdbc.BadSqlGrammarException;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+
+import static io.github.dumijdev.restdbserver.application.core.domain.common.Where.Operator.NOT_NULL;
+import static io.github.dumijdev.restdbserver.application.core.domain.common.Where.Operator.NULL;
 
 @Slf4j(topic = "SelectOperation")
 @Component
@@ -33,17 +38,26 @@ public class SelectOperationSpringDBAdapter implements SelectOperationOutputPort
   @Override
   public SelectResult select(SelectParams params) {
     try {
-      var sqlString = sqlGenerator.generateSelect(params);
+      var isCustomSqlQuery = params.sqlQuery().isPresent();
+      var sqlString = isCustomSqlQuery ? "SELECT %s".formatted(params.sqlQuery().get()) : sqlGenerator.generateSelect(params);
+
       log.info("Select SQL: {}", sqlString);
       var sql = client.sql(sqlString);
 
-      if (params.where().isPresent()) {
-        for (var condition : params.where().get().conditions()) {
-          sql.param(condition.field(), condition.value());
+      if (!isCustomSqlQuery && params.where().isPresent()) {
+        params.where().get().conditions()
+            .forEach(condition -> isNotReference(condition.operator(), sql, condition.value()));
+      }
+
+      if (!isCustomSqlQuery && (params.joins() != null && !params.joins().isEmpty())) {
+        for (var join : params.joins()) {
+          for (var onItem : join.on()) {
+            onItem.value().ifPresent(sql::param);
+          }
         }
       }
 
-      var results = sql.query(this::selectItemAdapter).list();
+      var results = sql.query(selectItemAdapter(params)).list();
 
       return new SelectResult(results);
     } catch (EmptyResultDataAccessException e) {
@@ -58,19 +72,39 @@ public class SelectOperationSpringDBAdapter implements SelectOperationOutputPort
     }
   }
 
-  private SelectItem selectItemAdapter(ResultSet rs, int rowNum) throws SQLException {
-    var itemBuilder = SelectItem.builder();
+  private RowMapper<SelectItem> selectItemAdapter(SelectParams params) {
+    return (ResultSet rs, int rowNum) -> {
+      var itemBuilder = SelectItem.builder();
 
-    var metadata = rs.getMetaData();
-    var columns = metadata.getColumnCount();
+      var metadata = rs.getMetaData();
+      var columns = metadata.getColumnCount();
+      var iterator = params.fields().iterator();
 
-    for (var i = 1; i <= columns; i++) {
-      var column = metadata.getColumnName(i);
-      var value = rs.getObject(i);
+      for (var i = 1; i <= columns; i++) {
+        var column = metadata.getColumnName(i);
+        var value = rs.getObject(i);
 
-      itemBuilder.put(column, value);
+        if (iterator.hasNext()) {
+          var field = iterator.next();
+
+          if(field.alias().isPresent()) {
+            column = field.alias().get();
+          } else if (!"*".equals(field.name())) {
+            column = field.name();
+          }
+
+        }
+
+        itemBuilder.put(column, value);
+      }
+
+      return itemBuilder.build();
+    };
+  }
+
+  private void isNotReference(Where.Operator operator, JdbcClient.StatementSpec sql, Object value) {
+    if (operator != NOT_NULL && operator != NULL) {
+      sql.param(value);
     }
-
-    return itemBuilder.build();
   }
 }
