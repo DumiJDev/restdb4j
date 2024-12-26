@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94ba7493-2270-4451-b6b7-b66c9416a31e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.copilot-plugin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/flow/generated-flow-imports.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/flow/generated-flow-imports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/flow/generated-flow-webcomponent-imports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/Flow.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/Flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/Flow.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/FlowBootstrap.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/FlowBootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/FlowClient.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/FlowClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/ReactRouterOutletElement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/comboBoxConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/contextMenuConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/contextMenuTargetConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/base-panel-CTLXjjmN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/copilot-features-plugin-DArMO9Mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/copilot-feedback-plugin-B550SpdM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/copilot-global-vars-later-UtaKiaeu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/copilot-info-plugin-DEhoYnCY.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/copilot-init-step2-tquZBMEC.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/copilot-log-plugin-Dd9Vu3DN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/copilot-shortcuts-plugin-Chva6DtS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/copilot-xjoIJFQc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/icons-AkLm3oZf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/overlay-monkeypatch-CXhp9hXg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/copilot/state-9-chcL5F.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/datepickerConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/disableOnClickFunctions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/dndConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/flow-component-directive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/flow-component-renderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/gridConnector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/index.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/lit-renderer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/menubarConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/messageListConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/selectConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/theme-util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/tooltip.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-big-decimal-field.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-dev-tools/License.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-dev-tools/connection.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-dev-tools/live-reload-connection.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-dev-tools/vaadin-dev-tools.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-dev-tools/vaadin-dev-tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-dev-tools/websocket-connection.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-grid-flow-selection-column.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-popover/popover.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-time-picker/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/vaadin-time-picker/timepickerConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/jar-resources/virtualListConnector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/vaadin-featureflags.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/generated/vaadin.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/io/github/dumijdev/restdb4japp/AppApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/io/github/dumijdev/restdb4japp/AppApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/JtedocsGenerated.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/JtedocsGenerated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/JtereadmeGenerated.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jte-classes/gg/jte/generated/ondemand/JtereadmeGenerated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/SelectResponseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/OnSideSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/OrderClauseSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/DatabaseStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/H2Strategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/PostgresStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/SQLiteStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/delete/DeleteParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/insert/InsertResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/SelectOnSide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/InsertOperationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/InsertOperationInputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/SelectOperationInputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/InsertOperationOutputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/SelectOperationOutputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/docs/DocsGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/jte/docs.jte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/jte/readme.jte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projects.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/ServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/CrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/CrudControllerDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudControllerDocs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/factories/SelectParamsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/SelectParamsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/factories/SelectResponseFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/FieldSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/FieldSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/JoinSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/JoinSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/OnConditionSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/OnConditionSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/OnSideSpec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/OrderClauseSpec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/PaginationSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/PaginationSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/SelectRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/SelectRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/SelectResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/SelectResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/WhereClauseSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/WhereClauseSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/input/controllers/models/WhereConditionSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/WhereConditionSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/SelectOperationSpringDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/SelectOperationSpringDBAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/ConnectionStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/ConnectionStringGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/DatabaseStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/H2Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/MySQLStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/MySQLStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/OracleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/OracleStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/PostgresStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/SQLGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/SQLGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/SQLiteStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/adapters/output/database/utils/UnsupportedDatabaseStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/UnsupportedDatabaseStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/common/Where.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/common/Where.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/delete/DeleteParams.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/exceptions/InvalidException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/exceptions/InvalidException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/exceptions/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/exceptions/ValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/insert/InsertParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/insert/InsertParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/insert/InsertResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/JoinType.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/JoinType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/SelectField.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/SelectField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/SelectItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/SelectItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/SelectJoins.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/SelectJoins.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/SelectOnCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/SelectOnCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/SelectOnSide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/SelectParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/SelectParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/select/SelectResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/select/SelectResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/domain/update/UpdateParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/update/UpdateParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/service/InsertOperationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/core/service/SelectOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/SelectOperationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/ports/input/InsertOperationInputPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/ports/input/SelectOperationInputPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/ports/output/InsertOperationOutputPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/application/ports/output/SelectOperationOutputPort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/infra/config/BeansConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/BeansConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/infra/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/dumijdev/restdbserver/infra/handler/GlobalHandlerExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/handler/GlobalHandlerExceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/dumijdev/restdbserver/ServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/io/github/dumijdev/restdb4j/server/ServerApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DumiJDev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DumiJDev/restdb4j.git",
+    "accountId": "43be8c4c-419f-4334-b619-0c2bc7073f3f"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2qlIDrzhWnFSEBTreOTwdNE3mNL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DocsGenerator.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.AppApplication.executor": "Run",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dumil/Documents/Projects/Java/restdb4j/client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.DocsGenerator">
+    <configuration name="DocsGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.dumijdev.restdb4j.server.infra.docs.DocsGenerator" />
+      <module name="restdb4j-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.dumijdev.restdb4j.server.infra.docs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="restdb4j-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.dumijdev.restdb4japp.AppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="restdb4j-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.dumijdev.restdb4j.server.ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DocsGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94ba7493-2270-4451-b6b7-b66c9416a31e" name="Changes" comment="" />
+      <created>1735230618451</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735230618451</updated>
+      <workItem from="1735230619750" duration="5177000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
+    <option name="sizePresets">
+      <list>
+        <SizePreset>
+          <option name="caption" value="Phone" />
+          <option name="height" value="568" />
+          <option name="width" value="320" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Tablet" />
+          <option name="height" value="1024" />
+          <option name="width" value="768" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Desktop" />
+          <option name="height" value="900" />
+          <option name="width" value="1440" />
+        </SizePreset>
+      </list>
+    </option>
+  </component>
+</project>
