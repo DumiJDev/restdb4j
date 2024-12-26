@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ${RESTDB_NAME:RestDB4J}
+  threads:
+    virtual:
+      enabled: true
+
+restdb4j:
+  platform: ${RESTDB_DB_PLATFORM:h2}
+  host: ${RESTDB_DB_HOST:localhost}
+  port: ${RESTDB_DB_PORT:}
+  user: ${RESTDB_DB_USER:sa}
+  password: ${RESTDB_DB_PWD:}
+  database: ${RESTDB_DB_NAME:restdb.db}
+  driver-class: ${RESTDB_DRIVER_CLASS:}
+  url: ${RESTDB_DB_URL:jdbc:h2:file:/etc/restdb/restdb.db}
+
+server:
+  servlet:
+    context-path: /${RESTDB_SERVER_NAME:restdb}
