@@ -28,7 +28,6 @@ public class SelectOperationSpringDBAdapter implements SelectOperationOutputPort
   private final JdbcClient client;
   private final SQLGenerator sqlGenerator;
 
-
   public SelectOperationSpringDBAdapter(JdbcClient client, SQLGenerator sqlGenerator) {
     this.client = client;
     this.sqlGenerator = sqlGenerator;

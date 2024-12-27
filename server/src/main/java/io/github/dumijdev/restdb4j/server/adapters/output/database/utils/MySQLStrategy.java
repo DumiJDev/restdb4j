@@ -70,12 +70,12 @@ public class MySQLStrategy implements DatabaseStrategy {
   @Override
   public String generateInsert(InsertParams params) {
     StringBuilder sql = new StringBuilder("INSERT INTO ");
-    appendTable(sql, params.table(), params.schema(), params.alias());
+    appendTable(sql, params.table(), params.schema(), Optional.empty());
 
     sql.append(" (");
     sql.append(String.join(", ", params.data().keySet()));
     sql.append(") VALUES (");
-    sql.append(String.join(", ", params.data().values().stream().map(v -> "?").toList()));
+    sql.append(String.join(", ", params.data().keySet().stream().map(":%s"::formatted).toList()));
     sql.append(")");
     return sql.toString();
   }

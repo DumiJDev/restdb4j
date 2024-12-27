@@ -1,5 +1,6 @@
 package io.github.dumijdev.restdb4j.server.adapters.input.controllers;
 
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.InsertRequest;
 import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.SelectRequest;
 import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.SelectResponse;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.ValidationException;
@@ -16,6 +17,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.Map;
 
 
 @OpenAPIDefinition(
@@ -45,7 +49,7 @@ public interface CrudControllerDocs {
               schema = @Schema(allOf = ValidationException.ItemException.class))
       )})
   @PostMapping("/insert/{table}")
-  ResponseEntity<Object> insert(@PathVariable String table);
+  ResponseEntity<Object> insert(@PathVariable String table, @RequestBody InsertRequest request);
 
   @Operation(summary = "Update data into database")
   @ApiResponses(value = {
