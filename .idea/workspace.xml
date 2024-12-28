@@ -5,16 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94ba7493-2270-4451-b6b7-b66c9416a31e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/InsertRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/InsertOperationSpringDBAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/DeleteParamsFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/InsertParamsFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/UpdateParamsFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/DeleteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/UpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/DeleteOperationSpringDBAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/UpdateOperationSpringDBAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/delete/DeleteResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/update/UpdateResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/DeleteOperationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/UpdateOperationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/DeleteOperationInputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/UpdateOperationInputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/DeleteOperationOutputPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/UpdateOperationOutputPort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudControllerDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudControllerDocs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/SelectOperationSpringDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/SelectOperationSpringDBAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/insert/InsertParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/insert/InsertParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/InsertRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/InsertRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/InsertOperationSpringDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/InsertOperationSpringDBAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/ConnectionStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/ConnectionStringGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/MySQLStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/MySQLStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/delete/DeleteParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/delete/DeleteParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/update/UpdateParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/update/UpdateParams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/BeansConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/BeansConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +41,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Record" />
         <option value="Class" />
       </list>
@@ -48,6 +66,9 @@
   "associatedIndex": 8
 }]]></component>
   <component name="ProjectId" id="2qlIDrzhWnFSEBTreOTwdNE3mNL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -80,7 +101,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories" />
       <recent name="io.github.dumijdev.restdb4j.server.adapters.input.controllers.models" />
+      <recent name="io.github.dumijdev.restdb4j.server.application.ports.output" />
+      <recent name="io.github.dumijdev.restdb4j.server.application.core.domain.delete" />
+      <recent name="io.github.dumijdev.restdb4j.server.application.core.domain.update" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ServerApplication">
@@ -106,6 +131,14 @@
       </method>
     </configuration>
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="RESTDB_DB_PLATFORM" value="mysql" />
+        <env name="RESTDB_DB_PORT" value="3306" />
+        <env name="RESTDB_DB_USER" value="root" />
+        <env name="RESTDB_DB_PWD" value="1234" />
+        <env name="RESTDB_DB_NAME" value="restdb" />
+        <env name="RESTDB_DB_HOST" value="localhost" />
+      </envs>
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="restdb4j-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.dumijdev.restdb4j.server.ServerApplication" />
@@ -113,6 +146,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.DocsGenerator" />
+      <item itemvalue="Spring Boot.AppApplication" />
+      <item itemvalue="Spring Boot.ServerApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.DocsGenerator" />
@@ -135,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735230618451</updated>
-      <workItem from="1735230619750" duration="8652000" />
+      <workItem from="1735230619750" duration="23849000" />
     </task>
     <servers />
   </component>

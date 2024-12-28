@@ -26,56 +26,13 @@ public class MySQLStrategy implements DatabaseStrategy {
     return sql.toString();
   }
 
-  private void appendJoins(StringBuilder sql, SelectParams params) {
-    if (params.joins() != null && !params.joins().isEmpty()) {
-      for (var join : params.joins()) {
-        sql.append(" ")
-            .append(join.type().name()) // INNER, LEFT, RIGHT, etc.
-            .append(" JOIN ")
-            .append(join.table());
-
-        if (join.alias().isPresent()) {
-          sql.append(' ').append(join.alias().get());
-        }
-
-        // Constrói a cláusula ON para cada JOIN
-        sql.append(" ON ");
-        sql.append(join.on().stream()
-            .map(this::mapJoinCondition)
-            .reduce((c1, c2) -> c1 + " AND " + c2)
-            .orElseThrow(() -> new IllegalArgumentException("JOIN requires at least one ON condition")));
-      }
-    }
-  }
-
-  private String mapJoinCondition(SelectOnCondition condition) {
-    if (condition.right().isPresent()) {
-      // Comparação entre campos de tabelas
-      return "%s.%s %s %s.%s".formatted(
-          condition.left().table(), condition.left().field(),
-          condition.operator().value(),
-          condition.right().get().table(), condition.right().get().field()
-      );
-    } else if (condition.value().isPresent()) {
-      // Comparação com valor estático
-      return "%s.%s %s ?".formatted(
-          condition.left().table(), condition.left().field(),
-          condition.operator().value()
-      );
-    }
-    throw new IllegalArgumentException("JOIN ON condition must specify either a right operand or a value");
-  }
-
-
   @Override
   public String generateInsert(InsertParams params) {
     StringBuilder sql = new StringBuilder("INSERT INTO ");
     appendTable(sql, params.table(), params.schema(), Optional.empty());
 
-    sql.append(" (");
-    sql.append(String.join(", ", params.data().keySet()));
-    sql.append(") VALUES (");
-    sql.append(String.join(", ", params.data().keySet().stream().map(":%s"::formatted).toList()));
+    sql.append(" (").append(String.join(", ", params.data().keySet())).append(") VALUES (");
+    sql.append(String.join(", ", params.data().keySet().stream().map(s -> "?").toList()));
     sql.append(")");
     return sql.toString();
   }
@@ -178,5 +135,45 @@ public class MySQLStrategy implements DatabaseStrategy {
     }
 
     return field;
+  }
+
+  private void appendJoins(StringBuilder sql, SelectParams params) {
+    if (params.joins() != null && !params.joins().isEmpty()) {
+      for (var join : params.joins()) {
+        sql.append(" ")
+            .append(join.type().name()) // INNER, LEFT, RIGHT, etc.
+            .append(" JOIN ")
+            .append(join.table());
+
+        if (join.alias().isPresent()) {
+          sql.append(' ').append(join.alias().get());
+        }
+
+        // Constrói a cláusula ON para cada JOIN
+        sql.append(" ON ");
+        sql.append(join.on().stream()
+            .map(this::mapJoinCondition)
+            .reduce((c1, c2) -> c1 + " AND " + c2)
+            .orElseThrow(() -> new IllegalArgumentException("JOIN requires at least one ON condition")));
+      }
+    }
+  }
+
+  private String mapJoinCondition(SelectOnCondition condition) {
+    if (condition.right().isPresent()) {
+      // Comparação entre campos de tabelas
+      return "%s.%s %s %s.%s".formatted(
+          condition.left().table(), condition.left().field(),
+          condition.operator().value(),
+          condition.right().get().table(), condition.right().get().field()
+      );
+    } else if (condition.value().isPresent()) {
+      // Comparação com valor estático
+      return "%s.%s %s ?".formatted(
+          condition.left().table(), condition.left().field(),
+          condition.operator().value()
+      );
+    }
+    throw new IllegalArgumentException("JOIN ON condition must specify either a right operand or a value");
   }
 }

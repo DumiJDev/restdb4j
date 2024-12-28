@@ -1,13 +1,12 @@
 package io.github.dumijdev.restdb4j.server.adapters.input.controllers;
 
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories.SelectParamsFactory;
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories.SelectResponseFactory;
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.InsertRequest;
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.SelectRequest;
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.SelectResponse;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories.*;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.*;
 import io.github.dumijdev.restdb4j.server.application.core.domain.insert.InsertParams;
+import io.github.dumijdev.restdb4j.server.application.ports.input.DeleteOperationInputPort;
 import io.github.dumijdev.restdb4j.server.application.ports.input.InsertOperationInputPort;
 import io.github.dumijdev.restdb4j.server.application.ports.input.SelectOperationInputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.input.UpdateOperationInputPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,10 +17,17 @@ import java.util.Optional;
 public class CrudController implements CrudControllerDocs {
   private final SelectOperationInputPort selectOperation;
   private final InsertOperationInputPort insertOperation;
+  private final UpdateOperationInputPort updateOperation;
+  private final DeleteOperationInputPort deleteOperation;
 
-  public CrudController(SelectOperationInputPort selectOperation, InsertOperationInputPort insertOperation) {
+  public CrudController(SelectOperationInputPort selectOperation,
+                        InsertOperationInputPort insertOperation,
+                        UpdateOperationInputPort updateOperation,
+                        DeleteOperationInputPort deleteOperation) {
     this.selectOperation = selectOperation;
     this.insertOperation = insertOperation;
+    this.updateOperation = updateOperation;
+    this.deleteOperation = deleteOperation;
   }
 
   @Override
@@ -36,21 +42,23 @@ public class CrudController implements CrudControllerDocs {
 
   @Override
   @PostMapping("/insert/{table}")
-  public ResponseEntity<Object> insert(@PathVariable String table, @RequestBody InsertRequest request) {
-    var insertResult = insertOperation.insert(new InsertParams(table, Optional.empty(), request.data(), Optional.empty()));
+  public ResponseEntity<Void> insert(@PathVariable String table, @RequestBody InsertRequest request) {
+    var insertResult = insertOperation.insert(InsertParamsFactory.createFromRequest(request, table));
 
-    return ResponseEntity.ok().build();
+    return ResponseEntity.noContent().build();
   }
 
   @Override
   @PostMapping("/update/{table}")
-  public ResponseEntity<Object> update(@PathVariable String table) {
-    return ResponseEntity.ok().build();
+  public ResponseEntity<Void> update(@PathVariable String table, @RequestBody UpdateRequest request) {
+    var updateResult = updateOperation.update(UpdateParamsFactory.createFromRequest(request, table));
+    return ResponseEntity.noContent().build();
   }
 
   @Override
   @PostMapping("/delete/{table}")
-  public ResponseEntity<Object> delete(@PathVariable String table) {
-    return ResponseEntity.ok().build();
+  public ResponseEntity<Void> delete(@PathVariable String table, @RequestBody DeleteRequest request) {
+    var deleteResult = deleteOperation.delete(DeleteParamsFactory.createFromRequest(request, table));
+    return ResponseEntity.noContent().build();
   }
 }

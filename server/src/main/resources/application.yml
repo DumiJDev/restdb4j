@@ -4,6 +4,9 @@ spring:
   threads:
     virtual:
       enabled: true
+  h2:
+    console:
+      enabled: false
 
 restdb4j:
   platform: ${RESTDB_DB_PLATFORM:h2}
@@ -11,9 +14,9 @@ restdb4j:
   port: ${RESTDB_DB_PORT:}
   user: ${RESTDB_DB_USER:sa}
   password: ${RESTDB_DB_PWD:}
-  database: ${RESTDB_DB_NAME:restdb.db}
+  database: ${RESTDB_DB_NAME:restdb}
   driver-class: ${RESTDB_DRIVER_CLASS:}
-  url: ${RESTDB_DB_URL:jdbc:h2:file:/etc/restdb/restdb.db}
+  url: ${RESTDB_DB_URL:}
 
 server:
   servlet:

@@ -14,7 +14,7 @@ public class ConnectionStringGenerator {
 
   public String generate(Map<String, String> params) {
     if (params == null || params.isEmpty()) {
-      throw new IllegalArgumentException("Os parâmetros de conexão não podem ser nulos ou vazios.");
+      throw new IllegalArgumentException("Connection parameters cannot be empty");
     }
 
     String host = params.getOrDefault("host", "localhost");
@@ -25,19 +25,20 @@ public class ConnectionStringGenerator {
     String url = params.getOrDefault("url", "");
 
     if (!url.isEmpty()) {
+      log.info("Generated connection string from URL.");
       return url;
     }
 
-    var connectionString =  switch (database) {
-      case MYSQL -> generateMySQLConnectionString(host, port, dbName, user, password);
-      case POSTGRES -> generatePostgresConnectionString(host, port, dbName, user, password);
+    var connectionString = switch (database) {
+      case MYSQL -> generateMySQLConnectionString(host, port, dbName);
+      case POSTGRES -> generatePostgresConnectionString(host, port, dbName);
       case ORACLE -> generateOracleConnectionString(host, port, dbName, user, password);
       case SQLITE -> generateSQLiteConnectionString(dbName);
       case H2 -> generateH2ConnectionString(dbName);
       default -> throw new UnsupportedOperationException("Database not supported: " + database);
     };
 
-    log.info("Generated connection string: {}", connectionString);
+    logConnectionDetails(database, host, port, dbName, user);
 
     return connectionString;
   }
@@ -52,12 +53,12 @@ public class ConnectionStringGenerator {
     };
   }
 
-  private String generateMySQLConnectionString(String host, String port, String dbName, String user, String password) {
-    return String.format("jdbc:mysql://%s:%s/%s?user=%s&password=%s", host, port, dbName, user, password);
+  private String generateMySQLConnectionString(String host, String port, String dbName) {
+    return String.format("jdbc:mysql://%s:%s/%s", host, port, dbName);
   }
 
-  private String generatePostgresConnectionString(String host, String port, String dbName, String user, String password) {
-    return String.format("jdbc:postgresql://%s:%s/%s?user=%s&password=%s", host, port, dbName, user, password);
+  private String generatePostgresConnectionString(String host, String port, String dbName) {
+    return String.format("jdbc:postgresql://%s:%s/%s", host, port, dbName);
   }
 
   private String generateOracleConnectionString(String host, String port, String dbName, String user, String password) {
@@ -65,10 +66,22 @@ public class ConnectionStringGenerator {
   }
 
   private String generateSQLiteConnectionString(String dbName) {
-    return String.format("jdbc:sqlite:%s", dbName);
+    return String.format("jdbc:sqlite:/restdb/%s", dbName);
   }
 
   private String generateH2ConnectionString(String dbName) {
     return String.format("jdbc:h2:file:/restdb/%s", dbName);
+  }
+
+  private void logConnectionDetails(SQLGenerator.Database database, String host, String port, String dbName, String user) {
+    log.info("Generated connection string details: [Database: {}, Host: {}, Port: {}, Database Name: {}, User: {}]",
+        database, host, port, dbName, maskString(user));
+  }
+
+  private String maskString(String input) {
+    if (input == null || input.isEmpty()) {
+      return "N/A";
+    }
+    return input.replaceAll("\\.", "*");
   }
 }

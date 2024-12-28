@@ -8,13 +8,12 @@ import io.github.dumijdev.restdb4j.server.application.core.domain.insert.InsertR
 import io.github.dumijdev.restdb4j.server.application.ports.output.InsertOperationOutputPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.simple.JdbcClient;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-@Slf4j
+@Slf4j(topic = "InsertOperation")
 public class InsertOperationSpringDBAdapter implements InsertOperationOutputPort {
   private final JdbcClient client;
   private final SQLGenerator generator;
@@ -35,7 +34,7 @@ public class InsertOperationSpringDBAdapter implements InsertOperationOutputPort
 
       if (!isCustomSqlQuery) {
         for (var fields : params.data().entrySet()) {
-          sql.param(fields.getKey(), fields.getValue());
+          sql.param(fields.getValue());
         }
       }
 
@@ -44,6 +43,7 @@ public class InsertOperationSpringDBAdapter implements InsertOperationOutputPort
       return new InsertResult();
 
     } catch (Exception e) {
+      log.error("Occurred an exception", e);
       throw new InvalidException(List.of(new ValidationException.ItemException("internal", e.getMessage())));
     }
   }

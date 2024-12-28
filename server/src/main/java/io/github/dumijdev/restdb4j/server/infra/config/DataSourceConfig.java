@@ -2,6 +2,7 @@ package io.github.dumijdev.restdb4j.server.infra.config;
 
 import io.github.dumijdev.restdb4j.server.adapters.output.database.utils.ConnectionStringGenerator;
 import io.github.dumijdev.restdb4j.server.adapters.output.database.utils.SQLGenerator;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +16,7 @@ import static io.github.dumijdev.restdb4j.server.adapters.output.database.utils.
 
 
 @Configuration
+@Slf4j
 public class DataSourceConfig {
   @Value("${restdb4j.user}")
   private String username;
@@ -48,6 +50,7 @@ public class DataSourceConfig {
 
     var database = SQLGenerator.Database.from(platform);
     var resolvedDriverClass = resolveDriverClass(database);
+    log.info("Using '{}' as '{}'", database, resolvedDriverClass);
     if (resolvedDriverClass == null) {
       throw new IllegalStateException("JDBC driver class not found: " + database.value());
     }
