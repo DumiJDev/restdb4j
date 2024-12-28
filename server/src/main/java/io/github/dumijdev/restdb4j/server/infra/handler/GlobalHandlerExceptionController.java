@@ -2,6 +2,7 @@ package io.github.dumijdev.restdb4j.server.infra.handler;
 
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.InvalidException;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.ValidationException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.util.List;
 
+@Slf4j
 @RestControllerAdvice
 public class GlobalHandlerExceptionController extends ResponseEntityExceptionHandler {
   @ExceptionHandler({ValidationException.class, InvalidException.class})
@@ -29,6 +31,8 @@ public class GlobalHandlerExceptionController extends ResponseEntityExceptionHan
       return responseEntity.body(ve.exceptions());
     }
 
-    return responseEntity.body(List.of(new ValidationException.ItemException("internal", ex.getMessage())));
+    log.error("Unhandled exception", ex);
+
+    return responseEntity.body(List.of(new ValidationException.ItemException("internal", "Internal Server Error")));
   }
 }
