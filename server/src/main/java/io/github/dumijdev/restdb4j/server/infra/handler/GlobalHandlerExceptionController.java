@@ -17,7 +17,7 @@ import java.util.List;
 @RestControllerAdvice
 public class GlobalHandlerExceptionController extends ResponseEntityExceptionHandler {
   @ExceptionHandler({ValidationException.class, InvalidException.class})
-  public ResponseEntity<Object> handleValidationException(ValidationException ex, WebRequest request) {
+  public ResponseEntity<Object> handleValidationException(ValidationException ex) {
     var errors = ex.exceptions();
 
     return ResponseEntity.badRequest().body(errors);
