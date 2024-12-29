@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +114,8 @@
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
         <env name="RESTDB_DB_HOST" value="localhost" />
-        <env name="RESTDB_DB_NAME" value="restdb" />
-        <env name="RESTDB_DB_PLATFORM" value="postgres" />
+        <env name="RESTDB_DB_NAME" value="restdb.db" />
+        <env name="RESTDB_DB_PLATFORM" value="sqlite" />
         <env name="RESTDB_DB_PORT" value="5432" />
         <env name="RESTDB_DB_PWD" value="1234" />
         <env name="RESTDB_DB_USER" value="postgres" />
@@ -154,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735230618451</updated>
-      <workItem from="1735230619750" duration="30986000" />
+      <workItem from="1735230619750" duration="37581000" />
     </task>
     <servers />
   </component>
