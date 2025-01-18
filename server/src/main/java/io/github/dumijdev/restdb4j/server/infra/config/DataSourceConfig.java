@@ -1,7 +1,10 @@
 package io.github.dumijdev.restdb4j.server.infra.config;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import io.github.dumijdev.restdb4j.server.adapters.output.database.utils.ConnectionStringGenerator;
 import io.github.dumijdev.restdb4j.server.adapters.output.database.utils.SQLGenerator;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +18,7 @@ import static io.github.dumijdev.restdb4j.server.adapters.output.database.utils.
 
 
 @Configuration
+@Slf4j
 public class DataSourceConfig {
   @Value("${restdb4j.user}")
   private String username;
@@ -32,11 +36,13 @@ public class DataSourceConfig {
   private String driverClassName;
   @Value("${restdb4j.url}")
   private String url;
+  @Value("${spring.application.name}")
+  private String applicationName;
 
 
   private static final Map<String, String> DRIVER_MAP = Map.of(
       "mysql", "com.mysql.cj.jdbc.Driver",
-      "postgresql", "org.postgresql.Driver",
+      "postgres", "org.postgresql.Driver",
       "oracle", "oracle.jdbc.OracleDriver",
       "sqlite", "org.sqlite.JDBC",
       "h2", "org.h2.Driver"
@@ -48,19 +54,42 @@ public class DataSourceConfig {
 
     var database = SQLGenerator.Database.from(platform);
     var resolvedDriverClass = resolveDriverClass(database);
+    log.info("Using '{}' as '{}'", database, resolvedDriverClass);
     if (resolvedDriverClass == null) {
       throw new IllegalStateException("JDBC driver class not found: " + database.value());
     }
 
     var data = getData();
+    var config = new HikariConfig();
 
+    config.setDriverClassName(resolvedDriverClass);
+    config.setJdbcUrl(new ConnectionStringGenerator(database).generate(data));
+    config.setUsername(Optional.ofNullable(username).orElseGet(() -> database == H2 ? "sa" : ""));
+    config.setPassword(Optional.ofNullable(password).orElse(""));
+
+
+    config.setMaximumPoolSize(30);
+    config.setMinimumIdle(2);
+    config.setIdleTimeout(10000);
+    config.setMaxLifetime(180000);
+    config.setConnectionTimeout(2000);
+
+
+    config.setPoolName(applicationName);
+
+    /*
+    config.addDataSourceProperty("cachePrepStmts", "true");
+    config.addDataSourceProperty("prepStmtCacheSize", "250");
+    config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
     var dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName(resolvedDriverClass);
     dataSource.setUrl(new ConnectionStringGenerator(database).generate(data));
     dataSource.setUsername(Optional.ofNullable(username).orElseGet(() -> database == H2 ? "sa" : ""));
     dataSource.setPassword(Optional.ofNullable(password).orElse(""));
 
-    return dataSource;
+    return dataSource;*/
+
+    return new HikariDataSource(config);
   }
 
   private String resolveDriverClass(SQLGenerator.Database database) {
