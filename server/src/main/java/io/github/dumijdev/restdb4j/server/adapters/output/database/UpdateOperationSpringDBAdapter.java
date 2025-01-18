@@ -6,7 +6,7 @@ import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.Inv
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.ValidationException;
 import io.github.dumijdev.restdb4j.server.application.core.domain.update.UpdateParams;
 import io.github.dumijdev.restdb4j.server.application.core.domain.update.UpdateResult;
-import io.github.dumijdev.restdb4j.server.application.ports.output.UpdateOperationOutputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.output.operations.UpdateOperationOutputPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Component;

@@ -1,5 +1,6 @@
 package io.github.dumijdev.restdb4j.server.adapters.output.database.utils;
 
+import io.github.dumijdev.restdb4j.server.adapters.output.database.utils.connection.builder.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
@@ -29,18 +30,18 @@ public class ConnectionStringGenerator {
       return url;
     }
 
-    var connectionString = switch (database) {
-      case MYSQL -> generateMySQLConnectionString(host, port, dbName);
-      case POSTGRES -> generatePostgresConnectionString(host, port, dbName);
-      case ORACLE -> generateOracleConnectionString(host, port, dbName, user, password);
-      case SQLITE -> generateSQLiteConnectionString(dbName);
-      case H2 -> generateH2ConnectionString(dbName);
+    ConnectionStringBuilder connectionStringBuilder = switch (database) {
+      case MYSQL -> new MySQLConnectionStringBuilder(host, port, dbName);
+      case POSTGRES -> new PostgresConnectionStringBuilder(host, port, dbName);
+      case ORACLE -> new OracleConnectionStringBuilder(host, port, dbName, user, password);
+      case SQLITE -> new SQLiteConnectionStringBuilder(dbName);
+      case H2 -> new H2ConnectionStringBuilder(dbName);
       default -> throw new UnsupportedOperationException("Database not supported: " + database);
     };
 
     logConnectionDetails(database, host, port, dbName, user);
 
-    return connectionString;
+    return connectionStringBuilder.generate();
   }
 
   private String getDefaultPort(SQLGenerator.Database database) {
@@ -51,26 +52,6 @@ public class ConnectionStringGenerator {
       case SQLITE, H2 -> "";
       default -> throw new UnsupportedOperationException("Database not supported: " + database);
     };
-  }
-
-  private String generateMySQLConnectionString(String host, String port, String dbName) {
-    return String.format("jdbc:mysql://%s:%s/%s", host, port, dbName);
-  }
-
-  private String generatePostgresConnectionString(String host, String port, String dbName) {
-    return String.format("jdbc:postgresql://%s:%s/%s", host, port, dbName);
-  }
-
-  private String generateOracleConnectionString(String host, String port, String dbName, String user, String password) {
-    return String.format("jdbc:oracle:thin:%s/%s@%s:%s:%s", user, password, host, port, dbName);
-  }
-
-  private String generateSQLiteConnectionString(String dbName) {
-    return String.format("jdbc:sqlite:/restdb/%s", dbName);
-  }
-
-  private String generateH2ConnectionString(String dbName) {
-    return String.format("jdbc:h2:file:/restdb/%s", dbName);
   }
 
   private void logConnectionDetails(SQLGenerator.Database database, String host, String port, String dbName, String user) {

@@ -1,12 +1,12 @@
-package io.github.dumijdev.restdb4j.server.application.core.service;
+package io.github.dumijdev.restdb4j.server.application.core.service.operations;
 
 import io.github.dumijdev.restdb4j.server.application.core.domain.common.Where;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.ValidationException;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.ValidationException.ItemException;
 import io.github.dumijdev.restdb4j.server.application.core.domain.select.SelectParams;
 import io.github.dumijdev.restdb4j.server.application.core.domain.select.SelectResult;
-import io.github.dumijdev.restdb4j.server.application.ports.input.SelectOperationInputPort;
-import io.github.dumijdev.restdb4j.server.application.ports.output.SelectOperationOutputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.input.operations.SelectOperationInputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.output.operations.SelectOperationOutputPort;
 
 import java.util.LinkedList;
 

@@ -1,8 +1,8 @@
-package io.github.dumijdev.restdb4j.server.application.ports.output;
+package io.github.dumijdev.restdb4j.server.application.ports.input.operations;
 
 import io.github.dumijdev.restdb4j.server.application.core.domain.update.UpdateParams;
 import io.github.dumijdev.restdb4j.server.application.core.domain.update.UpdateResult;
 
-public interface UpdateOperationOutputPort {
+public interface UpdateOperationInputPort {
   UpdateResult update(UpdateParams params);
 }

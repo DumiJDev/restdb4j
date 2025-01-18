@@ -1,9 +1,9 @@
-package io.github.dumijdev.restdb4j.server.application.core.service;
+package io.github.dumijdev.restdb4j.server.application.core.service.operations;
 
 import io.github.dumijdev.restdb4j.server.application.core.domain.update.UpdateParams;
 import io.github.dumijdev.restdb4j.server.application.core.domain.update.UpdateResult;
-import io.github.dumijdev.restdb4j.server.application.ports.input.UpdateOperationInputPort;
-import io.github.dumijdev.restdb4j.server.application.ports.output.UpdateOperationOutputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.input.operations.UpdateOperationInputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.output.operations.UpdateOperationOutputPort;
 
 public class UpdateOperationService implements UpdateOperationInputPort {
   private final UpdateOperationOutputPort outputPort;

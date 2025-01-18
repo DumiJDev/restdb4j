@@ -6,7 +6,7 @@ import io.github.dumijdev.restdb4j.server.application.core.domain.delete.DeleteP
 import io.github.dumijdev.restdb4j.server.application.core.domain.delete.DeleteResult;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.InvalidException;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.ValidationException;
-import io.github.dumijdev.restdb4j.server.application.ports.output.DeleteOperationOutputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.output.operations.DeleteOperationOutputPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Component;

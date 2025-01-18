@@ -1,9 +1,9 @@
-package io.github.dumijdev.restdb4j.server.application.core.service;
+package io.github.dumijdev.restdb4j.server.application.core.service.operations;
 
 import io.github.dumijdev.restdb4j.server.application.core.domain.delete.DeleteParams;
 import io.github.dumijdev.restdb4j.server.application.core.domain.delete.DeleteResult;
-import io.github.dumijdev.restdb4j.server.application.ports.input.DeleteOperationInputPort;
-import io.github.dumijdev.restdb4j.server.application.ports.output.DeleteOperationOutputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.input.operations.DeleteOperationInputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.output.operations.DeleteOperationOutputPort;
 
 public class DeleteOperationService implements DeleteOperationInputPort {
   private final DeleteOperationOutputPort outputPort;

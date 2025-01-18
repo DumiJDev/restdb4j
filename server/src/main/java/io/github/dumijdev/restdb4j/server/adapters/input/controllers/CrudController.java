@@ -2,17 +2,14 @@ package io.github.dumijdev.restdb4j.server.adapters.input.controllers;
 
 import io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories.*;
 import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.*;
-import io.github.dumijdev.restdb4j.server.application.core.domain.insert.InsertParams;
-import io.github.dumijdev.restdb4j.server.application.ports.input.DeleteOperationInputPort;
-import io.github.dumijdev.restdb4j.server.application.ports.input.InsertOperationInputPort;
-import io.github.dumijdev.restdb4j.server.application.ports.input.SelectOperationInputPort;
-import io.github.dumijdev.restdb4j.server.application.ports.input.UpdateOperationInputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.input.operations.DeleteOperationInputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.input.operations.InsertOperationInputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.input.operations.SelectOperationInputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.input.operations.UpdateOperationInputPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
-@RequestMapping("/api/")
+@RequestMapping("/api/operations")
 @RestController
 public class CrudController implements CrudControllerDocs {
   private final SelectOperationInputPort selectOperation;

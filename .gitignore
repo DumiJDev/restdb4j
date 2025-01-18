@@ -1,1 +1,5 @@
 jte-classes/
+.idea/
+target/
+**/target/
+**/src/main/frontend/

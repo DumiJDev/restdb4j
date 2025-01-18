@@ -77,17 +77,6 @@ public class DataSourceConfig {
 
     config.setPoolName(applicationName);
 
-    /*
-    config.addDataSourceProperty("cachePrepStmts", "true");
-    config.addDataSourceProperty("prepStmtCacheSize", "250");
-    config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
-    var dataSource = new DriverManagerDataSource();
-    dataSource.setDriverClassName(resolvedDriverClass);
-    dataSource.setUrl(new ConnectionStringGenerator(database).generate(data));
-    dataSource.setUsername(Optional.ofNullable(username).orElseGet(() -> database == H2 ? "sa" : ""));
-    dataSource.setPassword(Optional.ofNullable(password).orElse(""));
-
-    return dataSource;*/
 
     return new HikariDataSource(config);
   }

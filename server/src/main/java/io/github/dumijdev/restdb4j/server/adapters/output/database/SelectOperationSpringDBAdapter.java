@@ -7,7 +7,7 @@ import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.Val
 import io.github.dumijdev.restdb4j.server.application.core.domain.select.SelectItem;
 import io.github.dumijdev.restdb4j.server.application.core.domain.select.SelectParams;
 import io.github.dumijdev.restdb4j.server.application.core.domain.select.SelectResult;
-import io.github.dumijdev.restdb4j.server.application.ports.output.SelectOperationOutputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.output.operations.SelectOperationOutputPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
