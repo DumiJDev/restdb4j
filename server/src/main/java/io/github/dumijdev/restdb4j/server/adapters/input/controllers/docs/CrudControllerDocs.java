@@ -1,6 +1,6 @@
-package io.github.dumijdev.restdb4j.server.adapters.input.controllers;
+package io.github.dumijdev.restdb4j.server.adapters.input.controllers.docs;
 
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.*;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations.*;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.ValidationException;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
@@ -17,11 +17,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.Map;
-
 
 @OpenAPIDefinition(
-    info = @Info(version = "0.0.1", title = "${spring.application.name}", license = @License(name = "MIT"), contact = @Contact(name = "DumiJDev", email = "dumi703@gmail.com")),
+    info = @Info(version = "0.0.1", title = "${spring.application.name} Operations", license = @License(name = "MIT"), contact = @Contact(name = "DumiJDev", email = "dumi703@gmail.com")),
     tags = {@Tag(name = "RestDB", description = "Operations from database")}
 )
 public interface CrudControllerDocs {

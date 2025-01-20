@@ -1,7 +1,8 @@
 package io.github.dumijdev.restdb4j.server.adapters.input.controllers;
 
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.docs.CrudControllerDocs;
 import io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories.*;
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.*;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations.*;
 import io.github.dumijdev.restdb4j.server.application.ports.input.operations.DeleteOperationInputPort;
 import io.github.dumijdev.restdb4j.server.application.ports.input.operations.InsertOperationInputPort;
 import io.github.dumijdev.restdb4j.server.application.ports.input.operations.SelectOperationInputPort;
@@ -11,16 +12,16 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/api/operations")
 @RestController
-public class CrudController implements CrudControllerDocs {
+public class OperationsController implements CrudControllerDocs {
   private final SelectOperationInputPort selectOperation;
   private final InsertOperationInputPort insertOperation;
   private final UpdateOperationInputPort updateOperation;
   private final DeleteOperationInputPort deleteOperation;
 
-  public CrudController(SelectOperationInputPort selectOperation,
-                        InsertOperationInputPort insertOperation,
-                        UpdateOperationInputPort updateOperation,
-                        DeleteOperationInputPort deleteOperation) {
+  public OperationsController(SelectOperationInputPort selectOperation,
+                              InsertOperationInputPort insertOperation,
+                              UpdateOperationInputPort updateOperation,
+                              DeleteOperationInputPort deleteOperation) {
     this.selectOperation = selectOperation;
     this.insertOperation = insertOperation;
     this.updateOperation = updateOperation;

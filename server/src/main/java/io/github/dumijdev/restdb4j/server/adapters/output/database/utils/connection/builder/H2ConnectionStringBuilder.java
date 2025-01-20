@@ -9,6 +9,6 @@ public class H2ConnectionStringBuilder implements ConnectionStringBuilder {
 
   @Override
   public String generate() {
-    return String.format("jdbc:h2:file:/restdb/%s", dbName);
+    return String.format("jdbc:h2:file:%s/.restdb/%s", System.getProperty("user.dir"), dbName);
   }
 }

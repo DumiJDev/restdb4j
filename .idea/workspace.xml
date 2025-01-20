@@ -5,21 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94ba7493-2270-4451-b6b7-b66c9416a31e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/ConnectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/ConnectionControllerDocs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/ConnectionStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/H2ConnectionStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/MySQLConnectionStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/OracleConnectionStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/PostgresConnectionStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/SQLiteConnectionStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/connection/ConnectionDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/docs/ConnectionControllerDocs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/connections/NewConnectionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/connections/UpdateConnectionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/LocalMapDBRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/RestD4JRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/connections/CreateConnectionSpringAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/connections/DeleteConnectionSpringAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/connections/GetConnectionSpringAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/connections/GetConnectionsSpringAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/connection/CreateConnectionParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/connection/DeleteConnectionParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/connection/GetConnectionParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/connection/GetConnectionsParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/domain/connection/UpdateConnectionParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/MapDBConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/ConnectionStringGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/ConnectionStringGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/infra/config/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/ConnectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/ConnectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/ConnectionControllerDocs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/OperationsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/CrudControllerDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/docs/CrudControllerDocs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/DeleteParamsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/DeleteParamsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/InsertParamsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/InsertParamsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/SelectParamsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/SelectParamsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/SelectResponseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/SelectResponseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/UpdateParamsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/factories/UpdateParamsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/DeleteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/DeleteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/FieldSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/FieldSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/InsertRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/InsertRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/JoinSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/JoinSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/OnConditionSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/OnConditionSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/OnSideSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/OnSideSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/OrderClauseSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/OrderClauseSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/PaginationSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/PaginationSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/SelectRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/SelectRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/SelectResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/SelectResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/UpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/UpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/WhereClauseSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/WhereClauseSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/WhereConditionSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/input/controllers/models/operations/WhereConditionSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/DeleteOperationSpringDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/operations/DeleteOperationSpringDBAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/InsertOperationSpringDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/operations/InsertOperationSpringDBAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/SelectOperationSpringDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/operations/SelectOperationSpringDBAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/UpdateOperationSpringDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/operations/UpdateOperationSpringDBAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/H2ConnectionStringBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/H2ConnectionStringBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/SQLiteConnectionStringBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/adapters/output/database/utils/connection/builder/SQLiteConnectionStringBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/CreateConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/CreateConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/DeleteConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/DeleteConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/GetConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/GetConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/GetConnectionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/GetConnectionsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/UpdateConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections/UpdateConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/CreateConnectionInputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/CreateConnectionInputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/DeleteConnectionInputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/DeleteConnectionInputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/GetConnectionInputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/GetConnectionInputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/GetConnectionsInputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/GetConnectionsInputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/UpdateConnectionInputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/input/connections/UpdateConnectionInputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/CreateConnectionOutputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/CreateConnectionOutputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/DeleteConnectionOutputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/DeleteConnectionOutputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/GetConnectionOutputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/GetConnectionOutputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/GetConnectionsOutputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/GetConnectionsOutputPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/UpdateConnectionOutputPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/io/github/dumijdev/restdb4j/server/application/ports/output/connections/UpdateConnectionOutputPort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +75,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -68,6 +114,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.DocsGenerator.executor": "Run",
+    "Maven.restdb4j-parent [clean,install,-U].executor": "Run",
+    "Maven.restdb4j-parent [compile].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -78,7 +126,7 @@
     "Spring Boot.ServerApplication.executor": "Run",
     "git-widget-placeholder": "feat-add-multi-tenant-support",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dumil/Documents/Projects/Java/restdb4j/client",
+    "last_opened_file_path": "C:/Users/dumil/Documents/Projects/Java/restdb4j/server/src/main/java/io/github/dumijdev/restdb4j/server/application/core/service/connections",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,12 +141,26 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.connections" />
+      <recent name="io.github.dumijdev.restdb4j.server.adapters.output.database" />
+      <recent name="io.github.dumijdev.restdb4j.server.application.core.domain.connection" />
       <recent name="io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories" />
       <recent name="io.github.dumijdev.restdb4j.server.adapters.input.controllers.models" />
-      <recent name="io.github.dumijdev.restdb4j.server.application.ports.output" />
-      <recent name="io.github.dumijdev.restdb4j.server.application.core.domain.delete" />
-      <recent name="io.github.dumijdev.restdb4j.server.application.core.domain.update" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dumil\Documents\Projects\Java\restdb4j\server\src\main\java\io\github\dumijdev\restdb4j\server\application\core\service\connections" />
+      <recent name="C:\Users\dumil\Documents\Projects\Java\restdb4j\server\src\main\java\io\github\dumijdev\restdb4j\server\application\ports\output\connections" />
+      <recent name="C:\Users\dumil\Documents\Projects\Java\restdb4j\server\src\main\java\io\github\dumijdev\restdb4j\server\application\ports\output" />
+    </key>
+    <key name="CreateBuilderDialog.RecentsKey">
+      <recent name="io.github.dumijdev.restdb4j.server.application.core.domain.connection" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn compile" />
+      <command value="mvn clean install -U" />
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ServerApplication">
     <configuration name="DocsGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

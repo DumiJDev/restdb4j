@@ -9,6 +9,6 @@ public class SQLiteConnectionStringBuilder implements ConnectionStringBuilder {
 
   @Override
   public String generate() {
-    return String.format("jdbc:sqlite:/restdb/%s", dbName);
+    return String.format("jdbc:sqlite:%s/.restdb/%s", System.getProperty("user.dir"), dbName);
   }
 }

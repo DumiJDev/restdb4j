@@ -1,4 +1,4 @@
-package io.github.dumijdev.restdb4j.server.adapters.input.controllers.models;
+package io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations;
 
 public record DeleteRequest(
     String sqlQuery,

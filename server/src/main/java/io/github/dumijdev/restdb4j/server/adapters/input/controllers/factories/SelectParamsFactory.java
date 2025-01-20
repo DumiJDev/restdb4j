@@ -1,9 +1,9 @@
 package io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories;
 
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.JoinSpec;
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.OrderClauseSpec;
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.SelectRequest;
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.WhereConditionSpec;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations.JoinSpec;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations.OrderClauseSpec;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations.SelectRequest;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations.WhereConditionSpec;
 import io.github.dumijdev.restdb4j.server.application.core.domain.common.Where;
 import io.github.dumijdev.restdb4j.server.application.core.domain.common.Where.Condition;
 import io.github.dumijdev.restdb4j.server.application.core.domain.common.Where.Operator;

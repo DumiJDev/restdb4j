@@ -1,6 +1,6 @@
 package io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories;
 
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.DeleteRequest;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations.DeleteRequest;
 import io.github.dumijdev.restdb4j.server.application.core.domain.common.Where;
 import io.github.dumijdev.restdb4j.server.application.core.domain.delete.DeleteParams;
 

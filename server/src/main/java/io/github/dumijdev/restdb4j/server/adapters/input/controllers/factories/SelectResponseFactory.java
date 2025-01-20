@@ -1,6 +1,6 @@
 package io.github.dumijdev.restdb4j.server.adapters.input.controllers.factories;
 
-import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.SelectResponse;
+import io.github.dumijdev.restdb4j.server.adapters.input.controllers.models.operations.SelectResponse;
 import io.github.dumijdev.restdb4j.server.application.core.domain.select.SelectItem;
 import io.github.dumijdev.restdb4j.server.application.core.domain.select.SelectResult;
 

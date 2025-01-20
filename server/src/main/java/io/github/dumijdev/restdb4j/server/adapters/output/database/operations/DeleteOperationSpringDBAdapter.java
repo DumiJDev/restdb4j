@@ -1,12 +1,12 @@
-package io.github.dumijdev.restdb4j.server.adapters.output.database;
+package io.github.dumijdev.restdb4j.server.adapters.output.database.operations;
 
 import io.github.dumijdev.restdb4j.server.adapters.output.database.utils.SQLGenerator;
 import io.github.dumijdev.restdb4j.server.application.core.domain.common.Where;
+import io.github.dumijdev.restdb4j.server.application.core.domain.delete.DeleteParams;
+import io.github.dumijdev.restdb4j.server.application.core.domain.delete.DeleteResult;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.InvalidException;
 import io.github.dumijdev.restdb4j.server.application.core.domain.exceptions.ValidationException;
-import io.github.dumijdev.restdb4j.server.application.core.domain.update.UpdateParams;
-import io.github.dumijdev.restdb4j.server.application.core.domain.update.UpdateResult;
-import io.github.dumijdev.restdb4j.server.application.ports.output.operations.UpdateOperationOutputPort;
+import io.github.dumijdev.restdb4j.server.application.ports.output.operations.DeleteOperationOutputPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Component;
@@ -17,37 +17,34 @@ import static io.github.dumijdev.restdb4j.server.application.core.domain.common.
 import static io.github.dumijdev.restdb4j.server.application.core.domain.common.Where.Operator.NULL;
 
 @Component
-@Slf4j(topic = "UpdateOperation")
-public class UpdateOperationSpringDBAdapter implements UpdateOperationOutputPort {
+@Slf4j(topic = "DeleteOperation")
+public class DeleteOperationSpringDBAdapter implements DeleteOperationOutputPort {
   private final JdbcClient client;
   private final SQLGenerator sqlGenerator;
 
-  public UpdateOperationSpringDBAdapter(JdbcClient client, SQLGenerator sqlGenerator) {
+  public DeleteOperationSpringDBAdapter(JdbcClient client, SQLGenerator sqlGenerator) {
     this.client = client;
     this.sqlGenerator = sqlGenerator;
   }
 
   @Override
-  public UpdateResult update(UpdateParams params) {
+  public DeleteResult update(DeleteParams params) {
     try {
       var isCustomSqlQuery = params.sqlQuery().isPresent();
-      var sqlString = isCustomSqlQuery ? "UPDATE %s".formatted(params.sqlQuery().get()) : sqlGenerator.generateUpdate(params);
+      var sqlString = isCustomSqlQuery ? "SELECT %s".formatted(params.sqlQuery().get()) : sqlGenerator.generateDelete(params);
 
-      log.info("Update SQL: {}", sqlString);
+      log.info("Delete SQL: {}", sqlString);
       var sql = client.sql(sqlString);
-
-      params.data().values().forEach(sql::param);
 
       if (!isCustomSqlQuery && params.where().isPresent()) {
         params.where().get().conditions()
             .forEach(condition -> isNotReference(condition.operator(), sql, condition.value()));
       }
 
-      var results = sql.update();
-
-      return new UpdateResult();
+      sql.update();
+      return new DeleteResult();
     } catch (Exception e) {
-      log.error("Occurred an exception", e);
+      log.error("Delete operation failed", e);
       throw new InvalidException(List.of(new ValidationException.ItemException("internal", e.getMessage())));
     }
   }

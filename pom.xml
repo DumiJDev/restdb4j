@@ -19,7 +19,6 @@
         <module>app</module>
         <module>client</module>
         <module>server</module>
-        <module>client</module>
     </modules>
 
     <properties>
